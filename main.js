@@ -1,7 +1,7 @@
-const fs = require('fs');
-let products = []
+//const fs = require('fs');
+export let products = []
 
-class ProductManager{
+    export class ProductManager{
     constructor(filename){
         this.filename=filename
     }
@@ -19,15 +19,15 @@ class ProductManager{
             thumbnail,
             code,
             stock})
-            fs.writeFileSync(this.filename, JSON.stringify(products, null, 2))
+            //fs.writeFileSync(this.filename, JSON.stringify(products, null, 2))
     }
 
-    getProducts =() =>{if (fs.existsSync('products.JSON')) {
-        const contenido = fs.readFileSync('products.JSON', 'utf-8')
-        console.log(contenido)
-    } else {
-        console.log('El archivo no existe')
-    }}
+    //getProducts =() =>{if (fs.existsSync('products.JSON')) {
+    //    const contenido = fs.readFileSync('products.JSON', 'utf-8')
+    //    console.log(contenido)
+    //} else {
+    //    console.log('El archivo no existe')
+    //}}
 
 
     getProductById = () => {
@@ -61,5 +61,4 @@ class ProductManager{
  }
 
  productManager();
-
 
